@@ -1,6 +1,11 @@
 name: Repository baseline
 
 on:
+  # A maintainer manually adding a PR label runs the required check.
+  # workflow_dispatch results are not evaluated as required PR checks.
+  pull_request:
+    types: [labeled]
+    branches: [main]
   workflow_dispatch:
 
 permissions:

@@ -10,7 +10,7 @@
 - 模型用户/账务归 wildflow-api，GPU/推理 Job/Artifact/Recovery 归 wildflow-inference；不复制其职责。
 - Markdown、配置与日志查询使用原生文本搜索。结构化代码若有本仓 CodeGraph，先核对索引 Project 等于 Git 根；没有索引时使用原生工具，不使用父仓索引。
 - PR 前运行 `bash scripts/check.sh`，记录候选 SHA、验证范围和未验证项；应用实现加入后补真实 lint/test/build 与安装、升级、恢复测试。
-- 普通 CI 仅手动触发；不得把没有 checks 解释成通过，也不得声称本地门禁等于服务端分支保护。
+- 普通 CI 仅手动触发：分支检查用 `workflow_dispatch`，PR 必需检查由维护者手动加标签触发；不得把没有 checks 解释成通过，也不得声称本地门禁等于服务端分支保护。
 - 后续修改走 PR，不直接推送或强推 main；低风险合并按负责人常设授权执行，其余需明确授权。
 - 本仓已获准按 MIT 开源；许可变更、Tag、Release、付费调用、业务内容发布和生产部署仍需明确授权。
 - 先读 [README](README.md)、[SECURITY](SECURITY.md)、[贡献规则](CONTRIBUTING.md)与[版本边界](docs/releases.md)。
