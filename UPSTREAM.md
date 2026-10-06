@@ -2,12 +2,17 @@
 
 | 对象 | 来源 | 当前处理 |
 |---|---|---|
-| DeepSeek Harness | https://github.com/deepseek-ai/deepseek-harness | 优先集成方向；尚未选择或安装运行版本，未复制源码 |
-| Obsidian | https://obsidian.md/ | 外部应用依赖；不随本仓再分发应用本体 |
+| DeepSeek Harness | https://github.com/deepseek-ai/deepseek-harness | 已确定的 Harness 插件系统基础方向；本仓尚未选择或安装运行版本，未复制源码 |
+| Storybound 爆款流水线交接包 | 已有内部场景交接包 | 首版流程、提示词装配和输出约定的打磨来源；尚未迁入本仓，尚无本仓插件/Skill 安装与运行验证 |
+| Obsidian | https://obsidian.md/ | 按需接入的外部应用，不作为首版既定依赖；不随本仓再分发应用本体 |
 | 通用 Skills、DSH/OB 插件 | 各自的权威仓库或作者发行渠道 | 按需选取；尚未冻结清单，不复制整套用户配置 |
 
 未来每项依赖须登记精确版本或 commit、许可、来源、校验值、安装方式及兼容验证。
 DSH 源码分支与 npm 发行标签可能不同；不得仅按最新文档声称安装版兼容。
+
+Storybound 的来源名称在此登记，不包含私人存放位置、业务稿件、账号、凭据或实际素材。
+后续整理时分别登记脚本、提示词和输出契约的来源与许可，不能将交接包整体默认为本仓原创 MIT 内容。
+包内供应商与节点调用还需适配主要使用 WildFlow 模型服务的方向；包内运行记录不能替代本仓验收。
 
 Git 仓库、npm 包、DSH Bundle、Skill 和 OB 插件是不同单位。目录存在不等于可安装；
 依赖安装不等于运行配置已经启用；安装成功不等于真实业务任务完成。
